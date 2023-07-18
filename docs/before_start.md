@@ -41,5 +41,10 @@ from [here](https://drive.google.com/drive/folders/1rVaBRdOpS2JkAo-ZRO64jSZU0Vbd
 checkpoint path for **rpl_corocl_weight_path** in config.py.
 
 ```shell
-python rpl_corocl.code/test.py
+- Example execution code
+$ python gmlv_mae_training.py --data_path '/path/to/data'
+
+- Specific execution code with 2048 unit
+$ python gmlv_mae_training.py --batch_size 256 --epochs 300 --input_length 2048 --patch_size 32 --embed_dim 32 --dec_dim 32 --mask_ratio 0.75 --enc_dep 8 --dec_dep 4 --enc_head 8 --dec_head 4 --lr 1e-3 --min_lr 0. --warmup_epochs 40 --weight_decay 0.05 --cpt_dir './gmlv_cpt' --name 'gmlv_test_neg_u' --data_path '/path/to/data' --device 'cuda' --num_workers 10 
+
 ```
